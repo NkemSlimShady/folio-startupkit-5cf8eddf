@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Divine Gahima</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" style="background:#0e0520;color:#f0ebff"><div class="hi"><div class="avp">D</div><h1>Folio</h1><p class="jt">Entrepreneurship Student + Founder</p><p class="tl">I build companies, not just decks. Wharton 2026. 2x founder. 1 successful exit.</p><div class="hc"><a href="#projects" class="btn">See what I have built</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#0a0318;color:#e8e0ff"><div class="c"><div class="ag"><div><h2>The pitch</h2><p>A Wharton entrepreneurship student who founded her first company at 19. EdTech startup acquired in 2023. Currently building in climate tech. Thiel Fellow finalist and Forbes 30 Under 30 nominee.</p><div class="am"><div class="ami"><strong>Location</strong>Philadelphia, PA</div><div class="ami"><strong>Email</strong><a href="mailto:zara@wharton.upenn.edu">zara@wharton.upenn.edu</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" style="background:#0e0520;color:#f0ebff"><div class="c"><h2>Expertise</h2><div class="sg"><span class="st sp">Fundraising</span><span class="st sd">Product Strategy</span><span class="st so">Go-to-Market</span><span class="st sp">Financial Modelling</span><span class="st sd">Pitch Decks</span><span class="st so">Growth Marketing</span><span class="st sp">SQL</span><span class="st sd">Customer Discovery</span><span class="st so">Term Sheet Negotiation</span></div></div></section>
+<section class="projects" id="projects" style="background:#0a0318;color:#e8e0ff"><div class="c"><h2>Ventures</h2><div class="pg"><div class="pc"><div class="pt">🚀</div><div class="pb"><h3>EduPath (Acquired)</h3><p>EdTech platform connecting students with tutors. Grew to $180k ARR in 14 months. Acquired by Chegg.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">🌐</div><div class="pb"><h3>GreenToken</h3><p>Web3 carbon credit marketplace. $240k in pre-seed funding. 800 active users in beta.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">⭐</div><div class="pb"><h3>Wharton Founders Club</h3><p>Founded student org connecting 300+ student entrepreneurs with 50+ mentors and 20+ VCs.</p><div class="pl"> </div></div></div></div></div></section>
+<section class="contact" id="contact" style="background:#0e0520;color:#f0ebff"><div class="c"><h2>Invest or collaborate</h2><p class="sub">Talking to angels, VCs, and potential co-founders right now.</p><div class="cl"><a href="mailto:zara@wharton.upenn.edu">✉ Email</a><a href="https://linkedin.com" target="_blank">in LinkedIn</a><a href="https://twitter.com" target="_blank">𝕏 Twitter</a></div></div></section>
+<footer style="background:#06010f;color:#2a1050"><p>2025 Zara Thompson. Wharton School</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
